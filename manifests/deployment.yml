@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: parameshwargettingstarted 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: parameshwargettingstarted
+  template:
+    metadata:
+      labels:
+        app: parameshwargettingstarted 
+    spec:
+      containers:
+        - name: parameshwargettingstarted 
+          image: webapplication320220206193310.azurecr.io/parameshwargettingstarted
+          ports:
+          - containerPort: 80
